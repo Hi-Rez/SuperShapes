@@ -9,9 +9,7 @@
 import Satin
 import SwiftUI
 
-struct ContentView: View {
-    @State private var showActionSheet = false
-    
+struct ContentView: View {    
     @State var controlsVisible = false
     @State var controlsOffset = CGSize.zero
     
@@ -121,13 +119,7 @@ struct ContentView: View {
                 VStack {
                     Spacer()
                     TransparentButton(image: Image("Share_Small"), imageSize: 24, imageOffsetY: -1.0) {
-                        self.showActionSheet.toggle()
-                        print("Share")
-                    }.sheet(isPresented: $showActionSheet, onDismiss: {
-                        print("bye World")
-                    }) {
-                        Color.white.frame(width: 300, height: 300)
-                        Text("Bye World")
+                        print("Implement Exporting")
                     }
                 }
                 .padding()

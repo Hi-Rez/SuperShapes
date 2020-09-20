@@ -1,27 +1,25 @@
 PODS:
-  - Forge (0.1.0)
-  - Satin (0.2.0)
-  - Youi (0.0.1):
+  - Forge (1.0.0)
+  - Satin (1.0.0)
+  - Youi (1.0.0):
     - Satin
 
 DEPENDENCIES:
-  - Forge (from `../Forge`)
-  - Satin (from `../Satin`)
-  - Youi (from `../Youi`)
+  - Forge (= 1.0.0)
+  - Satin (= 1.0.0)
+  - Youi (= 1.0.0)
 
-EXTERNAL SOURCES:
-  Forge:
-    :path: "../Forge"
-  Satin:
-    :path: "../Satin"
-  Youi:
-    :path: "../Youi"
+SPEC REPOS:
+  trunk:
+    - Forge
+    - Satin
+    - Youi
 
 SPEC CHECKSUMS:
-  Forge: 235ac8e6a6ac48d2db3be3bae3723ec6180b0ba1
-  Satin: 38cd644e7cb1a7defabc2d18ccb27c40223fdc1e
-  Youi: 3028987049f5a52304333c8606e3f2dc78e3ef67
+  Forge: 3062cd35e030a0beba76138e6c9cf89fa5916df6
+  Satin: 7a2d89efe3e539446960b69083e835c320069d58
+  Youi: 61661182012ae665bf8d7f558a546bb80c02a2c9
 
-PODFILE CHECKSUM: efacc03fc0c47da5bbd47764e10208a66e4e8f62
+PODFILE CHECKSUM: 8b367b4643536585975f525da7ad0e72aaa4ed45
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.10.0.rc.1
