@@ -1,6 +1,6 @@
 //
 //  SliderView.swift
-//  sui
+//  SuperShapes
 //
 //  Created by Reza Ali on 9/6/20.
 //  Copyright © 2020 Reza Ali. All rights reserved.

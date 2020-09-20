@@ -1,6 +1,6 @@
 //
-//  Renderer.swift
-//  sui
+//  SuperShapeRenderer.swift
+//  SuperShapes
 //
 //  Created by Reza Ali on 9/4/20.
 //  Copyright © 2020 Reza Ali. All rights reserved.
@@ -13,12 +13,6 @@ import Forge
 import Satin
 
 class SuperShapeRenderer: Forge.Renderer {
-    #if os(macOS) || os(iOS)
-    lazy var raycaster: Raycaster = {
-        Raycaster(context: context)
-    }()
-    #endif
-    
     var updateGeometry = true
 
     var r1Param = FloatParameter("R1", 1.0, 0, 2)
@@ -80,9 +74,7 @@ class SuperShapeRenderer: Forge.Renderer {
     }()
     
     lazy var cameraController: PerspectiveCameraController = {
-        let cc = PerspectiveCameraController(camera: camera, view: mtkView)
-//        cc.disable()
-        return cc
+        PerspectiveCameraController(camera: camera, view: mtkView)
     }()
     
     lazy var renderer: Satin.Renderer = {
@@ -90,12 +82,7 @@ class SuperShapeRenderer: Forge.Renderer {
         renderer.setClearColor([0.25, 0.25, 0.25, 1])
         return renderer
     }()
-    
-    override init() {
-        super.init()
-        print("my renderer init")
-    }
-    
+        
     override func setupMtkView(_ metalKitView: MTKView) {
         metalKitView.isPaused = false
         metalKitView.sampleCount = 8
@@ -104,8 +91,6 @@ class SuperShapeRenderer: Forge.Renderer {
     }
     
     override func setup() {
-        // Setup things here
-        
         DistributedNotificationCenter.default.addObserver(
             self,
             selector: #selector(updateAppearance),
@@ -114,13 +99,11 @@ class SuperShapeRenderer: Forge.Renderer {
         )
         
         updateAppearance()
-        
         setupObservers()
     }
     
     var observers: [NSKeyValueObservation] = []
-    
-    
+        
     func setupGeometry() {
         var geoData = generateSuperShapeGeometryData(
             r1Param.value,
@@ -149,8 +132,7 @@ class SuperShapeRenderer: Forge.Renderer {
             })
         }
     }
-    
-    
+        
     @objc func updateAppearance() {
         if let _ = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") {
             renderer.setClearColor([0.125, 0.125, 0.125, 1.0])
@@ -160,10 +142,7 @@ class SuperShapeRenderer: Forge.Renderer {
         }
     }
     
-//    var frame: Float = 0.0
     override func update() {
-//        frame += 0.0125
-        
         if updateGeometry {
             setupGeometry()
             updateGeometry = false
@@ -181,53 +160,5 @@ class SuperShapeRenderer: Forge.Renderer {
     override func resize(_ size: (width: Float, height: Float)) {
         camera.aspect = size.width / size.height
         renderer.resize(size)
-    }
-    
-    #if !targetEnvironment(simulator)
-    #if os(macOS)
-    override func mouseDown(with event: NSEvent) {
-//        cameraController.enable()
-        
-        let m = event.locationInWindow
-        let pt = normalizePoint(m, mtkView.frame.size)
-        raycaster.setFromCamera(camera, pt)
-        let results = raycaster.intersect(scene)
-        for result in results {
-            print(result.object.label)
-            print(result.position)
-        }
-    }
-    
-    override func mouseUp(with event: NSEvent) {
-//        DispatchQueue.main.async { [weak self] in
-//            if let strongSelf = self {
-//                strongSelf.cameraController.disable()
-//            }
-//        }
-    }
-    
-    #elseif os(iOS)
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let first = touches.first {
-            let point = first.location(in: mtkView)
-            let size = mtkView.frame.size
-            let pt = normalizePoint(point, size)
-            raycaster.setFromCamera(camera, pt)
-            let results = raycaster.intersect(scene, true)
-            for result in results {
-                print(result.object.label)
-                print(result.position)
-            }
-        }
-    }
-    #endif
-    #endif
-    
-    func normalizePoint(_ point: CGPoint, _ size: CGSize) -> simd_float2 {
-        #if os(macOS)
-        return 2.0 * simd_make_float2(Float(point.x / size.width), Float(point.y / size.height)) - 1.0
-        #else
-        return 2.0 * simd_make_float2(Float(point.x / size.width), 1.0 - Float(point.y / size.height)) - 1.0
-        #endif
     }
 }

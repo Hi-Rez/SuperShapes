@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,7 @@
 		E127E82A2502D59800DA08EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127E8292502D59800DA08EB /* Preview Assets.xcassets */; };
 		E127E82D2502D59800DA08EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E127E82B2502D59800DA08EB /* Main.storyboard */; };
 		E127E8362502D73C00DA08EB /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8352502D73C00DA08EB /* MetalView.swift */; };
-		E127E8482502DFDC00DA08EB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8472502DFDC00DA08EB /* Renderer.swift */; };
+		E127E8482502DFDC00DA08EB /* SuperShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8472502DFDC00DA08EB /* SuperShapeRenderer.swift */; };
 		E127E8622504638700DA08EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127E8612504638700DA08EB /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +38,10 @@
 		E127E82E2502D59800DA08EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E127E82F2502D59800DA08EB /* SuperShapes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuperShapes.entitlements; sourceTree = "<group>"; };
 		E127E8352502D73C00DA08EB /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
-		E127E8472502DFDC00DA08EB /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		E127E8472502DFDC00DA08EB /* SuperShapeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperShapeRenderer.swift; sourceTree = "<group>"; };
 		E127E8612504638700DA08EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		E149C7FF2518014100F41B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E149C8002518014900F41B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5C34748EFEADE43371B64A /* Pods-SuperShapes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes.debug.xcconfig"; path = "Target Support Files/Pods-SuperShapes/Pods-SuperShapes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 		E127E8162502D59600DA08EB = {
 			isa = PBXGroup;
 			children = (
+				E149C8002518014900F41B0D /* Assets.xcassets */,
 				E127E8212502D59600DA08EB /* Source */,
 				E127E8202502D59600DA08EB /* Products */,
 				C1BE165B143F74B0D54FAC87 /* Pods */,
@@ -95,19 +98,10 @@
 		E127E8212502D59600DA08EB /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E102BAD52506AEF70038498E /* VisualEffectView.swift */,
-				E127E8472502DFDC00DA08EB /* Renderer.swift */,
-				E127E8352502D73C00DA08EB /* MetalView.swift */,
-				E127E8222502D59600DA08EB /* AppDelegate.swift */,
-				E127E8242502D59600DA08EB /* ContentView.swift */,
-				E102BAC22505AFCD0038498E /* SliderView.swift */,
-				E102BAED2506BDE60038498E /* SuperShape.h */,
-				E102BAEF2506BE040038498E /* SuperShape.c */,
-				E102BAEE2506BE030038498E /* ShapeShapes-Bridging-Header.h */,
+				E149C7FB2518010400F41B0D /* Renderer */,
+				E149C7FA251800FF00F41B0D /* Interface */,
+				E149C7FE2518012A00F41B0D /* macOS */,
 				E127E8612504638700DA08EB /* Assets.xcassets */,
-				E127E82B2502D59800DA08EB /* Main.storyboard */,
-				E127E82E2502D59800DA08EB /* Info.plist */,
-				E127E82F2502D59800DA08EB /* SuperShapes.entitlements */,
 				E127E8282502D59800DA08EB /* Preview Content */,
 			);
 			path = Source;
@@ -119,6 +113,48 @@
 				E127E8292502D59800DA08EB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E149C7FA251800FF00F41B0D /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				E102BAC22505AFCD0038498E /* SliderView.swift */,
+				E127E8242502D59600DA08EB /* ContentView.swift */,
+				E102BAD52506AEF70038498E /* VisualEffectView.swift */,
+				E127E8352502D73C00DA08EB /* MetalView.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		E149C7FB2518010400F41B0D /* Renderer */ = {
+			isa = PBXGroup;
+			children = (
+				E149C7FC2518011400F41B0D /* Utilities */,
+				E127E8472502DFDC00DA08EB /* SuperShapeRenderer.swift */,
+			);
+			path = Renderer;
+			sourceTree = "<group>";
+		};
+		E149C7FC2518011400F41B0D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E102BAED2506BDE60038498E /* SuperShape.h */,
+				E102BAEF2506BE040038498E /* SuperShape.c */,
+				E102BAEE2506BE030038498E /* ShapeShapes-Bridging-Header.h */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E149C7FE2518012A00F41B0D /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				E127E8222502D59600DA08EB /* AppDelegate.swift */,
+				E149C7FF2518014100F41B0D /* Assets.xcassets */,
+				E127E82B2502D59800DA08EB /* Main.storyboard */,
+				E127E82E2502D59800DA08EB /* Info.plist */,
+				E127E82F2502D59800DA08EB /* SuperShapes.entitlements */,
+			);
+			path = macOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E102BAD62506AEF70038498E /* VisualEffectView.swift in Sources */,
-				E127E8482502DFDC00DA08EB /* Renderer.swift in Sources */,
+				E127E8482502DFDC00DA08EB /* SuperShapeRenderer.swift in Sources */,
 				E127E8362502D73C00DA08EB /* MetalView.swift in Sources */,
 				E127E8252502D59600DA08EB /* ContentView.swift in Sources */,
 				E127E8232502D59600DA08EB /* AppDelegate.swift in Sources */,
@@ -380,14 +416,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Source/SuperShapes.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Source/macOS/SuperShapes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Source/Preview Content\"";
 				DEVELOPMENT_TEAM = CC7PU3PUHS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -395,7 +431,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.syedrezaali.supershapes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/ShapeShapes-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Renderer/Utilities/ShapeShapes-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
@@ -407,14 +443,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Source/SuperShapes.entitlements;
+				CODE_SIGN_ENTITLEMENTS = Source/macOS/SuperShapes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Source/Preview Content\"";
 				DEVELOPMENT_TEAM = CC7PU3PUHS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -422,7 +458,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.syedrezaali.supershapes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/ShapeShapes-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Renderer/Utilities/ShapeShapes-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

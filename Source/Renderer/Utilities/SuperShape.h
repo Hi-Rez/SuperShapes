@@ -1,6 +1,6 @@
 //
 //  SuperShape.h
-//  sui
+//  SuperShapes
 //
 //  Created by Reza Ali on 9/7/20.
 //  Copyright © 2020 Reza Ali. All rights reserved.
