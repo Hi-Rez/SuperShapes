@@ -1,5 +1,7 @@
 # SuperShapes
 
+<img src="./Images/SuperShapes.png" width="100%">
+
 ## About
 
 A fun little experiment showing how to use SwiftUI, Satin, Forge and Youi to make a 3D App for macOS
