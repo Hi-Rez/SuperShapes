@@ -17,7 +17,7 @@
 		E127E82D2502D59800DA08EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E127E82B2502D59800DA08EB /* Main.storyboard */; };
 		E127E8362502D73C00DA08EB /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8352502D73C00DA08EB /* MetalView.swift */; };
 		E127E8482502DFDC00DA08EB /* SuperShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8472502DFDC00DA08EB /* SuperShapeRenderer.swift */; };
-		E127E8622504638700DA08EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127E8612504638700DA08EB /* Assets.xcassets */; };
+		E1D89D5B25181C4100C40A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E149C8002518014900F41B0D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,7 +39,6 @@
 		E127E82F2502D59800DA08EB /* SuperShapes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuperShapes.entitlements; sourceTree = "<group>"; };
 		E127E8352502D73C00DA08EB /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		E127E8472502DFDC00DA08EB /* SuperShapeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperShapeRenderer.swift; sourceTree = "<group>"; };
-		E127E8612504638700DA08EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		E149C7FF2518014100F41B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E149C8002518014900F41B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5C34748EFEADE43371B64A /* Pods-SuperShapes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes.debug.xcconfig"; path = "Target Support Files/Pods-SuperShapes/Pods-SuperShapes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +100,6 @@
 				E149C7FB2518010400F41B0D /* Renderer */,
 				E149C7FA251800FF00F41B0D /* Interface */,
 				E149C7FE2518012A00F41B0D /* macOS */,
-				E127E8612504638700DA08EB /* Assets.xcassets */,
 				E127E8282502D59800DA08EB /* Preview Content */,
 			);
 			path = Source;
@@ -218,8 +216,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1D89D5B25181C4100C40A66 /* Assets.xcassets in Resources */,
 				E127E82D2502D59800DA08EB /* Main.storyboard in Resources */,
-				E127E8622504638700DA08EB /* Assets.xcassets in Resources */,
 				E127E82A2502D59800DA08EB /* Preview Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
