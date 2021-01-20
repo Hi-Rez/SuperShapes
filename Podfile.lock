@@ -1,13 +1,13 @@
 PODS:
-  - Forge (1.0.0)
-  - Satin (1.0.0)
-  - Youi (1.0.0):
+  - Forge (1.0.9)
+  - Satin (1.2.7)
+  - Youi (1.0.1):
     - Satin
 
 DEPENDENCIES:
-  - Forge (= 1.0.0)
-  - Satin (= 1.0.0)
-  - Youi (= 1.0.0)
+  - Forge
+  - Satin
+  - Youi
 
 SPEC REPOS:
   trunk:
@@ -16,10 +16,10 @@ SPEC REPOS:
     - Youi
 
 SPEC CHECKSUMS:
-  Forge: 3062cd35e030a0beba76138e6c9cf89fa5916df6
-  Satin: 7a2d89efe3e539446960b69083e835c320069d58
-  Youi: 61661182012ae665bf8d7f558a546bb80c02a2c9
+  Forge: abca50ae8838a6d745b9a4e204bc2cb800546cef
+  Satin: 319e0ae79da632444ec1dd8ee6e1f2a5e47e63a3
+  Youi: e46c797d73f07c3baf3f4e5ac40e75122d09b1ba
 
-PODFILE CHECKSUM: 8b367b4643536585975f525da7ad0e72aaa4ed45
+PODFILE CHECKSUM: 2567e06b485cd9b6e747cb760cfaf65710df01f5
 
-COCOAPODS: 1.10.0.rc.1
+COCOAPODS: 1.10.1

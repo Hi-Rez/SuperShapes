@@ -11,27 +11,34 @@ import MetalKit
 
 import Forge
 import Satin
+import Youi
 
-class SuperShapeRenderer: Forge.Renderer {
+class Renderer: Forge.Renderer, ObservableObject {
+    var inspectorWindow: InspectorWindow?
+    var _updateInspector: Bool = true
+    var observers: [NSKeyValueObservation] = []
+    
     var updateGeometry = true
 
-    var r1Param = FloatParameter("R1", 1.0, 0, 2)
-    var a1Param = FloatParameter("A1", 1.0, 0.0, 5.0)
-    var b1Param = FloatParameter("B1", 1.0, 0.0, 5.0)
-    var m1Param = FloatParameter("M1", 6, 0, 20)
-    var n11Param = FloatParameter("N11", 1.0, 0.0, 100.0)
-    var n21Param = FloatParameter("N21", 1.0, 0.0, 100.0)
-    var n31Param = FloatParameter("N31", 1.0, 0.0, 100.0)
-    var r2Param = FloatParameter("R2", 1.0, 0, 2)
-    var a2Param = FloatParameter("A2", 1.0, 0.0, 5.0)
-    var b2Param = FloatParameter("B2", 1.0, 0.0, 5.0)
-    var m2Param = FloatParameter("M2", 0.0, 0, 20)
-    var n12Param = FloatParameter("N12", 1.0, 0.0, 100.0)
-    var n22Param = FloatParameter("N22", 1.0, 0.0, 100.0)
-    var n32Param = FloatParameter("N32", 1.0, 0.0, 100.0)
+    var resParam = IntParameter("Resolution", 300, 3, 300, .slider)
+    var r1Param = FloatParameter("R1", 1.0, 0, 2, .slider)
+    var a1Param = FloatParameter("A1", 1.0, 0.0, 5.0, .slider)
+    var b1Param = FloatParameter("B1", 1.0, 0.0, 5.0, .slider)
+    var m1Param = FloatParameter("M1", 6, 0, 20, .slider)
+    var n11Param = FloatParameter("N11", 1.0, 0.0, 100.0, .slider)
+    var n21Param = FloatParameter("N21", 1.0, 0.0, 100.0, .slider)
+    var n31Param = FloatParameter("N31", 1.0, 0.0, 100.0, .slider)
+    var r2Param = FloatParameter("R2", 1.0, 0, 2, .slider)
+    var a2Param = FloatParameter("A2", 1.0, 0.0, 5.0, .slider)
+    var b2Param = FloatParameter("B2", 1.0, 0.0, 5.0, .slider)
+    var m2Param = FloatParameter("M2", 0.0, 0, 20, .slider)
+    var n12Param = FloatParameter("N12", 1.0, 0.0, 100.0, .slider)
+    var n22Param = FloatParameter("N22", 1.0, 0.0, 100.0, .slider)
+    var n32Param = FloatParameter("N32", 1.0, 0.0, 100.0, .slider)
 
-    lazy var params: [FloatParameter] = {
-        var params: [FloatParameter] = []
+    lazy var params: ParameterGroup = {
+        var params = ParameterGroup("Shape Controls")
+        params.append(resParam)
         params.append(r1Param)
         params.append(a1Param)
         params.append(b1Param)
@@ -66,10 +73,19 @@ class SuperShapeRenderer: Forge.Renderer {
     }()
     
     lazy var camera: PerspectiveCamera = {
-        let camera = PerspectiveCamera()
-        camera.position = simd_make_float3(0.0, 0.0, 5.0)
-        camera.near = 0.001
-        camera.far = 100.0
+        let pos = simd_make_float3(4.0, 2.5, 4.0)
+        let camera = PerspectiveCamera(position: pos, near: 0.001, far: 200.0)
+        camera.label = "Perspective Camera"
+        camera.fov = 30
+
+        camera.orientation = simd_quatf(from: Satin.worldForwardDirection, to: simd_normalize(pos))
+
+        let forward = simd_normalize(camera.forwardDirection)
+        let worldUp = Satin.worldUpDirection
+        let right = -simd_normalize(simd_cross(forward, worldUp))
+        let angle = acos(simd_dot(simd_normalize(camera.rightDirection), right))
+
+        camera.orientation = simd_quatf(angle: angle, axis: forward) * camera.orientation
         return camera
     }()
     
@@ -101,10 +117,9 @@ class SuperShapeRenderer: Forge.Renderer {
         updateAppearance()
         setupObservers()
     }
-    
-    var observers: [NSKeyValueObservation] = []
         
     func setupGeometry() {
+        let res = Int32(resParam.value)
         var geoData = generateSuperShapeGeometryData(
             r1Param.value,
             a1Param.value,
@@ -120,20 +135,27 @@ class SuperShapeRenderer: Forge.Renderer {
             n12Param.value,
             n22Param.value,
             n32Param.value,
-            300, 300)
+            res, res)
         mesh.geometry = Geometry(&geoData)
         freeGeometryData(&geoData)
     }
     
     func setupObservers() {
-        for param in params {
-            observers.append(param.observe(\.value) { [unowned self] _, _ in
-                self.updateGeometry = true
-            })
+        for param in params.params {
+            if let p = param as? FloatParameter {
+                observers.append(p.observe(\.value) { [unowned self] _, _ in
+                    self.updateGeometry = true
+                })
+            }
+            else if let p = param as? IntParameter {
+                observers.append(p.observe(\.value) { [unowned self] _, _ in
+                    self.updateGeometry = true
+                })
+            }
         }
     }
         
-    @objc func updateAppearance() {
+    @objc override func updateAppearance() {
         if let _ = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") {
             renderer.setClearColor([0.125, 0.125, 0.125, 1.0])
         }
@@ -148,8 +170,11 @@ class SuperShapeRenderer: Forge.Renderer {
             updateGeometry = false
         }
         
+        #if os(macOS)
+            updateInspector()
+        #endif
+        
         cameraController.update()
-        renderer.update()
     }
     
     override func draw(_ view: MTKView, _ commandBuffer: MTLCommandBuffer) {

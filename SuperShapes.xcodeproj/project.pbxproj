@@ -3,20 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D6C453905171A79B4F69E8A6 /* Pods_SuperShapes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CEE81FB98AE8238EC61EC5A /* Pods_SuperShapes.framework */; };
-		E102BAC32505AFCD0038498E /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102BAC22505AFCD0038498E /* SliderView.swift */; };
-		E102BAD62506AEF70038498E /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E102BAD52506AEF70038498E /* VisualEffectView.swift */; };
 		E102BAF02506BE040038498E /* SuperShape.c in Sources */ = {isa = PBXBuildFile; fileRef = E102BAEF2506BE040038498E /* SuperShape.c */; };
 		E127E8232502D59600DA08EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8222502D59600DA08EB /* AppDelegate.swift */; };
 		E127E8252502D59600DA08EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8242502D59600DA08EB /* ContentView.swift */; };
 		E127E82A2502D59800DA08EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127E8292502D59800DA08EB /* Preview Assets.xcassets */; };
 		E127E82D2502D59800DA08EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E127E82B2502D59800DA08EB /* Main.storyboard */; };
-		E127E8362502D73C00DA08EB /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8352502D73C00DA08EB /* MetalView.swift */; };
-		E127E8482502DFDC00DA08EB /* SuperShapeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8472502DFDC00DA08EB /* SuperShapeRenderer.swift */; };
+		E127E8482502DFDC00DA08EB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8472502DFDC00DA08EB /* Renderer.swift */; };
+		E1ABFF5625B8D2E700E8E45D /* Renderer+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABFF5525B8D2E700E8E45D /* Renderer+Inspector.swift */; };
+		E1ABFF5F25B8D50600E8E45D /* Renderer+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABFF5E25B8D50600E8E45D /* Renderer+Export.swift */; };
+		E1ABFF6225B8D6A200E8E45D /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABFF6125B8D6A200E8E45D /* ImageButton.swift */; };
+		E1ABFF6525B8D6CE00E8E45D /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABFF6425B8D6CE00E8E45D /* VisualEffectView.swift */; };
 		E1D89D5B25181C4100C40A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E149C8002518014900F41B0D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +26,6 @@
 		4DBF81D45E2A5D112F554B24 /* Pods-SuperShapes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes.release.xcconfig"; path = "Target Support Files/Pods-SuperShapes/Pods-SuperShapes.release.xcconfig"; sourceTree = "<group>"; };
 		8CEE81FB98AE8238EC61EC5A /* Pods_SuperShapes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperShapes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1F30C53C967EE7FA48804F /* Pods-sui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sui.release.xcconfig"; path = "Target Support Files/Pods-sui/Pods-sui.release.xcconfig"; sourceTree = "<group>"; };
-		E102BAC22505AFCD0038498E /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
-		E102BAD52506AEF70038498E /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		E102BAED2506BDE60038498E /* SuperShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperShape.h; sourceTree = "<group>"; };
 		E102BAEE2506BE030038498E /* ShapeShapes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapeShapes-Bridging-Header.h"; sourceTree = "<group>"; };
 		E102BAEF2506BE040038498E /* SuperShape.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SuperShape.c; sourceTree = "<group>"; };
@@ -37,10 +36,13 @@
 		E127E82C2502D59800DA08EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E127E82E2502D59800DA08EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E127E82F2502D59800DA08EB /* SuperShapes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuperShapes.entitlements; sourceTree = "<group>"; };
-		E127E8352502D73C00DA08EB /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
-		E127E8472502DFDC00DA08EB /* SuperShapeRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperShapeRenderer.swift; sourceTree = "<group>"; };
+		E127E8472502DFDC00DA08EB /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		E149C7FF2518014100F41B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E149C8002518014900F41B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1ABFF5525B8D2E700E8E45D /* Renderer+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Renderer+Inspector.swift"; sourceTree = "<group>"; };
+		E1ABFF5E25B8D50600E8E45D /* Renderer+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Renderer+Export.swift"; sourceTree = "<group>"; };
+		E1ABFF6125B8D6A200E8E45D /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		E1ABFF6425B8D6CE00E8E45D /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
 		EA5C34748EFEADE43371B64A /* Pods-SuperShapes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes.debug.xcconfig"; path = "Target Support Files/Pods-SuperShapes/Pods-SuperShapes.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -116,10 +118,9 @@
 		E149C7FA251800FF00F41B0D /* Interface */ = {
 			isa = PBXGroup;
 			children = (
-				E102BAC22505AFCD0038498E /* SliderView.swift */,
 				E127E8242502D59600DA08EB /* ContentView.swift */,
-				E102BAD52506AEF70038498E /* VisualEffectView.swift */,
-				E127E8352502D73C00DA08EB /* MetalView.swift */,
+				E1ABFF6125B8D6A200E8E45D /* ImageButton.swift */,
+				E1ABFF6425B8D6CE00E8E45D /* VisualEffectView.swift */,
 			);
 			path = Interface;
 			sourceTree = "<group>";
@@ -128,7 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				E149C7FC2518011400F41B0D /* Utilities */,
-				E127E8472502DFDC00DA08EB /* SuperShapeRenderer.swift */,
+				E127E8472502DFDC00DA08EB /* Renderer.swift */,
+				E1ABFF5525B8D2E700E8E45D /* Renderer+Inspector.swift */,
+				E1ABFF5E25B8D50600E8E45D /* Renderer+Export.swift */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
@@ -253,9 +256,11 @@
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperShapes/Pods-SuperShapes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperShapes/Pods-SuperShapes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -269,13 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E102BAD62506AEF70038498E /* VisualEffectView.swift in Sources */,
-				E127E8482502DFDC00DA08EB /* SuperShapeRenderer.swift in Sources */,
-				E127E8362502D73C00DA08EB /* MetalView.swift in Sources */,
+				E1ABFF5F25B8D50600E8E45D /* Renderer+Export.swift in Sources */,
+				E127E8482502DFDC00DA08EB /* Renderer.swift in Sources */,
+				E1ABFF5625B8D2E700E8E45D /* Renderer+Inspector.swift in Sources */,
 				E127E8252502D59600DA08EB /* ContentView.swift in Sources */,
+				E1ABFF6225B8D6A200E8E45D /* ImageButton.swift in Sources */,
+				E1ABFF6525B8D6CE00E8E45D /* VisualEffectView.swift in Sources */,
 				E127E8232502D59600DA08EB /* AppDelegate.swift in Sources */,
 				E102BAF02506BE040038498E /* SuperShape.c in Sources */,
-				E102BAC32505AFCD0038498E /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
