@@ -1,7 +1,7 @@
 PODS:
   - Forge (1.0.9)
   - Satin (1.2.7)
-  - Youi (1.0.1):
+  - Youi (2.0.0):
     - Satin
 
 DEPENDENCIES:
@@ -18,8 +18,8 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Forge: abca50ae8838a6d745b9a4e204bc2cb800546cef
   Satin: 319e0ae79da632444ec1dd8ee6e1f2a5e47e63a3
-  Youi: e46c797d73f07c3baf3f4e5ac40e75122d09b1ba
+  Youi: 547eb0561e59aaf62fe46c2c6d438d646a6ad7e3
 
-PODFILE CHECKSUM: 2567e06b485cd9b6e747cb760cfaf65710df01f5
+PODFILE CHECKSUM: b34d0a0f276f1c85ea49cdf9377a65328c8f44e8
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.0

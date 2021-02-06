@@ -3,157 +3,178 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D6C453905171A79B4F69E8A6 /* Pods_SuperShapes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CEE81FB98AE8238EC61EC5A /* Pods_SuperShapes.framework */; };
-		E102BAF02506BE040038498E /* SuperShape.c in Sources */ = {isa = PBXBuildFile; fileRef = E102BAEF2506BE040038498E /* SuperShape.c */; };
-		E127E8232502D59600DA08EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8222502D59600DA08EB /* AppDelegate.swift */; };
-		E127E8252502D59600DA08EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8242502D59600DA08EB /* ContentView.swift */; };
-		E127E82A2502D59800DA08EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E127E8292502D59800DA08EB /* Preview Assets.xcassets */; };
-		E127E82D2502D59800DA08EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E127E82B2502D59800DA08EB /* Main.storyboard */; };
-		E127E8482502DFDC00DA08EB /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E127E8472502DFDC00DA08EB /* Renderer.swift */; };
-		E1ABFF5625B8D2E700E8E45D /* Renderer+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABFF5525B8D2E700E8E45D /* Renderer+Inspector.swift */; };
-		E1ABFF5F25B8D50600E8E45D /* Renderer+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABFF5E25B8D50600E8E45D /* Renderer+Export.swift */; };
-		E1ABFF6225B8D6A200E8E45D /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABFF6125B8D6A200E8E45D /* ImageButton.swift */; };
-		E1ABFF6525B8D6CE00E8E45D /* VisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ABFF6425B8D6CE00E8E45D /* VisualEffectView.swift */; };
-		E1D89D5B25181C4100C40A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E149C8002518014900F41B0D /* Assets.xcassets */; };
+		5CC0BECD532B04E4994C7C99 /* Pods_SuperShapes_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C04679264FE164C80EB3E0C /* Pods_SuperShapes_iOS.framework */; };
+		6CA58EDD33E3A65F8243A9F8 /* Pods_SuperShapes_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CE34E6A080938592F55F87 /* Pods_SuperShapes_macOS.framework */; };
+		E183192925C9ED2E00415A37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183192825C9ED2E00415A37 /* AppDelegate.swift */; };
+		E183192D25C9ED2E00415A37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183192C25C9ED2E00415A37 /* ViewController.swift */; };
+		E183193225C9ED2E00415A37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E183193125C9ED2E00415A37 /* Assets.xcassets */; };
+		E183196A25CA143100415A37 /* Renderer+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183196325CA143100415A37 /* Renderer+Inspector.swift */; };
+		E183196B25CA143100415A37 /* SuperShape.c in Sources */ = {isa = PBXBuildFile; fileRef = E183196725CA143100415A37 /* SuperShape.c */; };
+		E183196C25CA143100415A37 /* Renderer+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183196825CA143100415A37 /* Renderer+Export.swift */; };
+		E183196D25CA143100415A37 /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183196925CA143100415A37 /* Renderer.swift */; };
+		E183197725CA164A00415A37 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E183197625CA164A00415A37 /* ViewController.xib */; };
+		E1E77D7325CDE052002258FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E77D7225CDE052002258FF /* AppDelegate.swift */; };
+		E1E77D7525CDE053002258FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1E77D7425CDE053002258FF /* Assets.xcassets */; };
+		E1E77D7825CDE053002258FF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1E77D7625CDE053002258FF /* MainMenu.xib */; };
+		E1E77DBD25CDE289002258FF /* Renderer+Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183196825CA143100415A37 /* Renderer+Export.swift */; };
+		E1E77DBE25CDE289002258FF /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183196925CA143100415A37 /* Renderer.swift */; };
+		E1E77DBF25CDE289002258FF /* Renderer+Inspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E183196325CA143100415A37 /* Renderer+Inspector.swift */; };
+		E1E77DC225CDE28F002258FF /* SuperShape.c in Sources */ = {isa = PBXBuildFile; fileRef = E183196725CA143100415A37 /* SuperShape.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2587D659663EC88B957C21EE /* Pods-sui.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sui.debug.xcconfig"; path = "Target Support Files/Pods-sui/Pods-sui.debug.xcconfig"; sourceTree = "<group>"; };
-		4DBF81D45E2A5D112F554B24 /* Pods-SuperShapes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes.release.xcconfig"; path = "Target Support Files/Pods-SuperShapes/Pods-SuperShapes.release.xcconfig"; sourceTree = "<group>"; };
-		8CEE81FB98AE8238EC61EC5A /* Pods_SuperShapes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperShapes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE1F30C53C967EE7FA48804F /* Pods-sui.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sui.release.xcconfig"; path = "Target Support Files/Pods-sui/Pods-sui.release.xcconfig"; sourceTree = "<group>"; };
-		E102BAED2506BDE60038498E /* SuperShape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SuperShape.h; sourceTree = "<group>"; };
-		E102BAEE2506BE030038498E /* ShapeShapes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShapeShapes-Bridging-Header.h"; sourceTree = "<group>"; };
-		E102BAEF2506BE040038498E /* SuperShape.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = SuperShape.c; sourceTree = "<group>"; };
-		E127E81F2502D59600DA08EB /* SuperShapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperShapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E127E8222502D59600DA08EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E127E8242502D59600DA08EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		E127E8292502D59800DA08EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E127E82C2502D59800DA08EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E127E82E2502D59800DA08EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E127E82F2502D59800DA08EB /* SuperShapes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuperShapes.entitlements; sourceTree = "<group>"; };
-		E127E8472502DFDC00DA08EB /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
-		E149C7FF2518014100F41B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E149C8002518014900F41B0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E1ABFF5525B8D2E700E8E45D /* Renderer+Inspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Renderer+Inspector.swift"; sourceTree = "<group>"; };
-		E1ABFF5E25B8D50600E8E45D /* Renderer+Export.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Renderer+Export.swift"; sourceTree = "<group>"; };
-		E1ABFF6125B8D6A200E8E45D /* ImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
-		E1ABFF6425B8D6CE00E8E45D /* VisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectView.swift; sourceTree = "<group>"; };
-		EA5C34748EFEADE43371B64A /* Pods-SuperShapes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes.debug.xcconfig"; path = "Target Support Files/Pods-SuperShapes/Pods-SuperShapes.debug.xcconfig"; sourceTree = "<group>"; };
+		18CE34E6A080938592F55F87 /* Pods_SuperShapes_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperShapes_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29F8A72DF325C853ECAAD899 /* Pods-SuperShapes-macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes-macOS.release.xcconfig"; path = "Target Support Files/Pods-SuperShapes-macOS/Pods-SuperShapes-macOS.release.xcconfig"; sourceTree = "<group>"; };
+		40322114119BFA5362D15DD1 /* Pods-YouiTwo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouiTwo.debug.xcconfig"; path = "Target Support Files/Pods-YouiTwo/Pods-YouiTwo.debug.xcconfig"; sourceTree = "<group>"; };
+		56FE0FC367A86B9B20283E52 /* Pods-YouiTwo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouiTwo.release.xcconfig"; path = "Target Support Files/Pods-YouiTwo/Pods-YouiTwo.release.xcconfig"; sourceTree = "<group>"; };
+		5C04679264FE164C80EB3E0C /* Pods_SuperShapes_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperShapes_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67A756FB5ACE85D452838004 /* Pods-SuperShapes-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes-iOS.debug.xcconfig"; path = "Target Support Files/Pods-SuperShapes-iOS/Pods-SuperShapes-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A3AF19A62F51ACA3E501BACE /* Pods-SuperShapes-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes-iOS.release.xcconfig"; path = "Target Support Files/Pods-SuperShapes-iOS/Pods-SuperShapes-iOS.release.xcconfig"; sourceTree = "<group>"; };
+		D8F79E70AD63F73872E558AB /* Pods-SuperShapes-macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperShapes-macOS.debug.xcconfig"; path = "Target Support Files/Pods-SuperShapes-macOS/Pods-SuperShapes-macOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E183192525C9ED2E00415A37 /* SuperShapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperShapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E183192825C9ED2E00415A37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E183192C25C9ED2E00415A37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E183193125C9ED2E00415A37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E183193625C9ED2E00415A37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E183196325CA143100415A37 /* Renderer+Inspector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Renderer+Inspector.swift"; sourceTree = "<group>"; };
+		E183196525CA143100415A37 /* SuperShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperShape.h; sourceTree = "<group>"; };
+		E183196625CA143100415A37 /* SuperShapes-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SuperShapes-Bridging-Header.h"; sourceTree = "<group>"; };
+		E183196725CA143100415A37 /* SuperShape.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SuperShape.c; sourceTree = "<group>"; };
+		E183196825CA143100415A37 /* Renderer+Export.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Renderer+Export.swift"; sourceTree = "<group>"; };
+		E183196925CA143100415A37 /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		E183197625CA164A00415A37 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		E1E77D3025CDB1E6002258FF /* SuperShapes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuperShapes.entitlements; sourceTree = "<group>"; };
+		E1E77D7025CDE052002258FF /* SuperShapes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperShapes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1E77D7225CDE052002258FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E1E77D7425CDE053002258FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1E77D7725CDE053002258FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E1E77D7925CDE053002258FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E127E81C2502D59600DA08EB /* Frameworks */ = {
+		E183192225C9ED2E00415A37 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C453905171A79B4F69E8A6 /* Pods_SuperShapes.framework in Frameworks */,
+				5CC0BECD532B04E4994C7C99 /* Pods_SuperShapes_iOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E77D6D25CDE052002258FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CA58EDD33E3A65F8243A9F8 /* Pods_SuperShapes_macOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2D99BB02001F7FE4D03D1EAF /* Frameworks */ = {
+		0EC49CA552A21DD7FF41E58C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8CEE81FB98AE8238EC61EC5A /* Pods_SuperShapes.framework */,
+				5C04679264FE164C80EB3E0C /* Pods_SuperShapes_iOS.framework */,
+				18CE34E6A080938592F55F87 /* Pods_SuperShapes_macOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C1BE165B143F74B0D54FAC87 /* Pods */ = {
+		DB5A3E88DE41B6AF1CE5FF87 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2587D659663EC88B957C21EE /* Pods-sui.debug.xcconfig */,
-				BE1F30C53C967EE7FA48804F /* Pods-sui.release.xcconfig */,
-				EA5C34748EFEADE43371B64A /* Pods-SuperShapes.debug.xcconfig */,
-				4DBF81D45E2A5D112F554B24 /* Pods-SuperShapes.release.xcconfig */,
+				40322114119BFA5362D15DD1 /* Pods-YouiTwo.debug.xcconfig */,
+				56FE0FC367A86B9B20283E52 /* Pods-YouiTwo.release.xcconfig */,
+				67A756FB5ACE85D452838004 /* Pods-SuperShapes-iOS.debug.xcconfig */,
+				A3AF19A62F51ACA3E501BACE /* Pods-SuperShapes-iOS.release.xcconfig */,
+				D8F79E70AD63F73872E558AB /* Pods-SuperShapes-macOS.debug.xcconfig */,
+				29F8A72DF325C853ECAAD899 /* Pods-SuperShapes-macOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		E127E8162502D59600DA08EB = {
+		E183191C25C9ED2E00415A37 = {
 			isa = PBXGroup;
 			children = (
-				E149C8002518014900F41B0D /* Assets.xcassets */,
-				E127E8212502D59600DA08EB /* Source */,
-				E127E8202502D59600DA08EB /* Products */,
-				C1BE165B143F74B0D54FAC87 /* Pods */,
-				2D99BB02001F7FE4D03D1EAF /* Frameworks */,
+				E1E77D3025CDB1E6002258FF /* SuperShapes.entitlements */,
+				E183193125C9ED2E00415A37 /* Assets.xcassets */,
+				E183194D25CA104F00415A37 /* iOS */,
+				E183192725C9ED2E00415A37 /* Source */,
+				E1E77D7125CDE052002258FF /* macOS */,
+				E183192625C9ED2E00415A37 /* Products */,
+				DB5A3E88DE41B6AF1CE5FF87 /* Pods */,
+				0EC49CA552A21DD7FF41E58C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		E127E8202502D59600DA08EB /* Products */ = {
+		E183192625C9ED2E00415A37 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E127E81F2502D59600DA08EB /* SuperShapes.app */,
+				E183192525C9ED2E00415A37 /* SuperShapes.app */,
+				E1E77D7025CDE052002258FF /* SuperShapes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E127E8212502D59600DA08EB /* Source */ = {
+		E183192725C9ED2E00415A37 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E149C7FB2518010400F41B0D /* Renderer */,
-				E149C7FA251800FF00F41B0D /* Interface */,
-				E149C7FE2518012A00F41B0D /* macOS */,
-				E127E8282502D59800DA08EB /* Preview Content */,
+				E183199E25CA216000415A37 /* ViewController */,
+				E183196225CA143100415A37 /* Renderer */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		E127E8282502D59800DA08EB /* Preview Content */ = {
+		E183194D25CA104F00415A37 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E127E8292502D59800DA08EB /* Preview Assets.xcassets */,
+				E183192825C9ED2E00415A37 /* AppDelegate.swift */,
+				E183193625C9ED2E00415A37 /* Info.plist */,
 			);
-			path = "Preview Content";
+			path = iOS;
 			sourceTree = "<group>";
 		};
-		E149C7FA251800FF00F41B0D /* Interface */ = {
+		E183196225CA143100415A37 /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
-				E127E8242502D59600DA08EB /* ContentView.swift */,
-				E1ABFF6125B8D6A200E8E45D /* ImageButton.swift */,
-				E1ABFF6425B8D6CE00E8E45D /* VisualEffectView.swift */,
-			);
-			path = Interface;
-			sourceTree = "<group>";
-		};
-		E149C7FB2518010400F41B0D /* Renderer */ = {
-			isa = PBXGroup;
-			children = (
-				E149C7FC2518011400F41B0D /* Utilities */,
-				E127E8472502DFDC00DA08EB /* Renderer.swift */,
-				E1ABFF5525B8D2E700E8E45D /* Renderer+Inspector.swift */,
-				E1ABFF5E25B8D50600E8E45D /* Renderer+Export.swift */,
+				E183196425CA143100415A37 /* Utilities */,
+				E183196925CA143100415A37 /* Renderer.swift */,
+				E183196325CA143100415A37 /* Renderer+Inspector.swift */,
+				E183196825CA143100415A37 /* Renderer+Export.swift */,
 			);
 			path = Renderer;
 			sourceTree = "<group>";
 		};
-		E149C7FC2518011400F41B0D /* Utilities */ = {
+		E183196425CA143100415A37 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				E102BAED2506BDE60038498E /* SuperShape.h */,
-				E102BAEF2506BE040038498E /* SuperShape.c */,
-				E102BAEE2506BE030038498E /* ShapeShapes-Bridging-Header.h */,
+				E183196525CA143100415A37 /* SuperShape.h */,
+				E183196625CA143100415A37 /* SuperShapes-Bridging-Header.h */,
+				E183196725CA143100415A37 /* SuperShape.c */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		E149C7FE2518012A00F41B0D /* macOS */ = {
+		E183199E25CA216000415A37 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E127E8222502D59600DA08EB /* AppDelegate.swift */,
-				E149C7FF2518014100F41B0D /* Assets.xcassets */,
-				E127E82B2502D59800DA08EB /* Main.storyboard */,
-				E127E82E2502D59800DA08EB /* Info.plist */,
-				E127E82F2502D59800DA08EB /* SuperShapes.entitlements */,
+				E183192C25C9ED2E00415A37 /* ViewController.swift */,
+				E183197625CA164A00415A37 /* ViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E1E77D7125CDE052002258FF /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				E1E77D7225CDE052002258FF /* AppDelegate.swift */,
+				E1E77D7425CDE053002258FF /* Assets.xcassets */,
+				E1E77D7625CDE053002258FF /* MainMenu.xib */,
+				E1E77D7925CDE053002258FF /* Info.plist */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -161,42 +182,62 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E127E81E2502D59600DA08EB /* SuperShapes */ = {
+		E183192425C9ED2E00415A37 /* SuperShapes-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E127E8322502D59800DA08EB /* Build configuration list for PBXNativeTarget "SuperShapes" */;
+			buildConfigurationList = E183193925C9ED2E00415A37 /* Build configuration list for PBXNativeTarget "SuperShapes-iOS" */;
 			buildPhases = (
-				686943DD6763C2E20B6D6313 /* [CP] Check Pods Manifest.lock */,
-				E127E81B2502D59600DA08EB /* Sources */,
-				E127E81C2502D59600DA08EB /* Frameworks */,
-				E127E81D2502D59600DA08EB /* Resources */,
-				BF599521A8FD8805DF38B3F6 /* [CP] Embed Pods Frameworks */,
+				350A118A52FE207359AA31EF /* [CP] Check Pods Manifest.lock */,
+				E183192125C9ED2E00415A37 /* Sources */,
+				E183192225C9ED2E00415A37 /* Frameworks */,
+				E183192325C9ED2E00415A37 /* Resources */,
+				2E423AC2FA8EFACDFB7A1CD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SuperShapes;
-			productName = sui;
-			productReference = E127E81F2502D59600DA08EB /* SuperShapes.app */;
+			name = "SuperShapes-iOS";
+			productName = YouiTwo;
+			productReference = E183192525C9ED2E00415A37 /* SuperShapes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E1E77D6F25CDE052002258FF /* SuperShapes-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1E77D7D25CDE053002258FF /* Build configuration list for PBXNativeTarget "SuperShapes-macOS" */;
+			buildPhases = (
+				E58F8B9A42D859A46E34E9BF /* [CP] Check Pods Manifest.lock */,
+				E1E77D6C25CDE052002258FF /* Sources */,
+				E1E77D6D25CDE052002258FF /* Frameworks */,
+				E1E77D6E25CDE052002258FF /* Resources */,
+				0283C43FF2E1E7871996BD66 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SuperShapes-macOS";
+			productName = "YouiTwo-macOS";
+			productReference = E1E77D7025CDE052002258FF /* SuperShapes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		E127E8172502D59600DA08EB /* Project object */ = {
+		E183191D25C9ED2E00415A37 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
-				ORGANIZATIONNAME = "Reza Ali";
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					E127E81E2502D59600DA08EB = {
-						CreatedOnToolsVersion = 11.7;
-						LastSwiftMigration = 1170;
+					E183192425C9ED2E00415A37 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					E1E77D6F25CDE052002258FF = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = E127E81A2502D59600DA08EB /* Build configuration list for PBXProject "SuperShapes" */;
+			buildConfigurationList = E183192025C9ED2E00415A37 /* Build configuration list for PBXProject "SuperShapes" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -204,31 +245,70 @@
 				en,
 				Base,
 			);
-			mainGroup = E127E8162502D59600DA08EB;
-			productRefGroup = E127E8202502D59600DA08EB /* Products */;
+			mainGroup = E183191C25C9ED2E00415A37;
+			productRefGroup = E183192625C9ED2E00415A37 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E127E81E2502D59600DA08EB /* SuperShapes */,
+				E183192425C9ED2E00415A37 /* SuperShapes-iOS */,
+				E1E77D6F25CDE052002258FF /* SuperShapes-macOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		E127E81D2502D59600DA08EB /* Resources */ = {
+		E183192325C9ED2E00415A37 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D89D5B25181C4100C40A66 /* Assets.xcassets in Resources */,
-				E127E82D2502D59800DA08EB /* Main.storyboard in Resources */,
-				E127E82A2502D59800DA08EB /* Preview Assets.xcassets in Resources */,
+				E183197725CA164A00415A37 /* ViewController.xib in Resources */,
+				E183193225C9ED2E00415A37 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E77D6E25CDE052002258FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E77D7525CDE053002258FF /* Assets.xcassets in Resources */,
+				E1E77D7825CDE053002258FF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		686943DD6763C2E20B6D6313 /* [CP] Check Pods Manifest.lock */ = {
+		0283C43FF2E1E7871996BD66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperShapes-macOS/Pods-SuperShapes-macOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E423AC2FA8EFACDFB7A1CD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperShapes-iOS/Pods-SuperShapes-iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		350A118A52FE207359AA31EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -243,63 +323,78 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SuperShapes-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-SuperShapes-iOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BF599521A8FD8805DF38B3F6 /* [CP] Embed Pods Frameworks */ = {
+		E58F8B9A42D859A46E34E9BF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperShapes/Pods-SuperShapes-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SuperShapes/Pods-SuperShapes-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SuperShapes-macOS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperShapes/Pods-SuperShapes-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		E127E81B2502D59600DA08EB /* Sources */ = {
+		E183192125C9ED2E00415A37 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1ABFF5F25B8D50600E8E45D /* Renderer+Export.swift in Sources */,
-				E127E8482502DFDC00DA08EB /* Renderer.swift in Sources */,
-				E1ABFF5625B8D2E700E8E45D /* Renderer+Inspector.swift in Sources */,
-				E127E8252502D59600DA08EB /* ContentView.swift in Sources */,
-				E1ABFF6225B8D6A200E8E45D /* ImageButton.swift in Sources */,
-				E1ABFF6525B8D6CE00E8E45D /* VisualEffectView.swift in Sources */,
-				E127E8232502D59600DA08EB /* AppDelegate.swift in Sources */,
-				E102BAF02506BE040038498E /* SuperShape.c in Sources */,
+				E183196C25CA143100415A37 /* Renderer+Export.swift in Sources */,
+				E183192D25C9ED2E00415A37 /* ViewController.swift in Sources */,
+				E183196D25CA143100415A37 /* Renderer.swift in Sources */,
+				E183196B25CA143100415A37 /* SuperShape.c in Sources */,
+				E183196A25CA143100415A37 /* Renderer+Inspector.swift in Sources */,
+				E183192925C9ED2E00415A37 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E77D6C25CDE052002258FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1E77DC225CDE28F002258FF /* SuperShape.c in Sources */,
+				E1E77DBF25CDE289002258FF /* Renderer+Inspector.swift in Sources */,
+				E1E77DBD25CDE289002258FF /* Renderer+Export.swift in Sources */,
+				E1E77DBE25CDE289002258FF /* Renderer.swift in Sources */,
+				E1E77D7325CDE052002258FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E127E82B2502D59800DA08EB /* Main.storyboard */ = {
+		E1E77D7625CDE053002258FF /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E127E82C2502D59800DA08EB /* Base */,
+				E1E77D7725CDE053002258FF /* Base */,
 			);
-			name = Main.storyboard;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		E127E8302502D59800DA08EB /* Debug */ = {
+		E183193725C9ED2E00415A37 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -325,6 +420,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -349,18 +445,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Source/info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		E127E8312502D59800DA08EB /* Release */ = {
+		E183193825C9ED2E00415A37 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -386,6 +481,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -404,65 +500,108 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Source/info.plist;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		E127E8332502D59800DA08EB /* Debug */ = {
+		E183193A25C9ED2E00415A37 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA5C34748EFEADE43371B64A /* Pods-SuperShapes.debug.xcconfig */;
+			baseConfigurationReference = 67A756FB5ACE85D452838004 /* Pods-SuperShapes-iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Source/macOS/SuperShapes.entitlements;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperShapes.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CC7PU3PUHS;
+				INFOPLIST_FILE = iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.syedrezaali.supershapes;
+				PRODUCT_NAME = SuperShapes;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Renderer/Utilities/SuperShapes-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E183193B25C9ED2E00415A37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3AF19A62F51ACA3E501BACE /* Pods-SuperShapes-iOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperShapes.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CC7PU3PUHS;
+				INFOPLIST_FILE = iOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.syedrezaali.supershapes;
+				PRODUCT_NAME = SuperShapes;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Renderer/Utilities/SuperShapes-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E1E77D7B25CDE053002258FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8F79E70AD63F73872E558AB /* Pods-SuperShapes-macOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperShapes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Source/Preview Content\"";
 				DEVELOPMENT_TEAM = CC7PU3PUHS;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.syedrezaali.supershapes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Renderer/Utilities/ShapeShapes-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				PRODUCT_NAME = SuperShapes;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Renderer/Utilities/SuperShapes-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		E127E8342502D59800DA08EB /* Release */ = {
+		E1E77D7C25CDE053002258FF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4DBF81D45E2A5D112F554B24 /* Pods-SuperShapes.release.xcconfig */;
+			baseConfigurationReference = 29F8A72DF325C853ECAAD899 /* Pods-SuperShapes-macOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = Source/macOS/SuperShapes.entitlements;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperShapes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Source/Preview Content\"";
 				DEVELOPMENT_TEAM = CC7PU3PUHS;
 				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "$(SRCROOT)/Source/macOS/Info.plist";
+				INFOPLIST_FILE = macOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.syedrezaali.supershapes;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Source/Renderer/Utilities/ShapeShapes-Bridging-Header.h";
+				PRODUCT_NAME = SuperShapes;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Source/Renderer/Utilities/SuperShapes-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -470,25 +609,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E127E81A2502D59600DA08EB /* Build configuration list for PBXProject "SuperShapes" */ = {
+		E183192025C9ED2E00415A37 /* Build configuration list for PBXProject "SuperShapes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E127E8302502D59800DA08EB /* Debug */,
-				E127E8312502D59800DA08EB /* Release */,
+				E183193725C9ED2E00415A37 /* Debug */,
+				E183193825C9ED2E00415A37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E127E8322502D59800DA08EB /* Build configuration list for PBXNativeTarget "SuperShapes" */ = {
+		E183193925C9ED2E00415A37 /* Build configuration list for PBXNativeTarget "SuperShapes-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E127E8332502D59800DA08EB /* Debug */,
-				E127E8342502D59800DA08EB /* Release */,
+				E183193A25C9ED2E00415A37 /* Debug */,
+				E183193B25C9ED2E00415A37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1E77D7D25CDE053002258FF /* Build configuration list for PBXNativeTarget "SuperShapes-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1E77D7B25CDE053002258FF /* Debug */,
+				E1E77D7C25CDE053002258FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = E127E8172502D59600DA08EB /* Project object */;
+	rootObject = E183191D25C9ED2E00415A37 /* Project object */;
 }

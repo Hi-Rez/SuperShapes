@@ -6,12 +6,18 @@
 //  Copyright © 2021 Reza Ali. All rights reserved.
 //
 
+#if os(macOS)
 import AppKit
+#elseif os(iOS)
+import UIKit
+#endif
+
 import Satin
 import ModelIO
 
 extension Renderer {
     func exportObj() {
+        #if os(macOS)
         let panel = NSSavePanel()
         panel.canCreateDirectories = true
         panel.showsTagField = false
@@ -22,6 +28,7 @@ extension Renderer {
                 self.exportObj(url)
             }
         }
+        #endif
     }
     
     func exportObj(_ url: URL) {

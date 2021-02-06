@@ -16,12 +16,23 @@ import Youi
 class Renderer: Forge.Renderer, ObservableObject {
     var inspectorWindow: InspectorWindow?
     var _updateInspector: Bool = true
+    
     var observers: [NSKeyValueObservation] = []
     
     var updateGeometry = true
 
+    lazy var wireframeParam: BoolParameter = {
+        var param = BoolParameter("Wireframe", false, .toggle, { [unowned self] value in
+            self.mesh.triangleFillMode = value ? .lines : .fill
+        })
+        return param
+    }()
+    
+    
+    var bgColorParam = Float4Parameter("Background", [0, 0, 0, 1], .colorpicker)
+    
     var resParam = IntParameter("Resolution", 300, 3, 300, .slider)
-    var r1Param = FloatParameter("R1", 1.0, 0, 2, .slider)
+    var r1Param = FloatParameter("R1", 1.0, 0, 2, .inputfield)
     var a1Param = FloatParameter("A1", 1.0, 0.0, 5.0, .slider)
     var b1Param = FloatParameter("B1", 1.0, 0.0, 5.0, .slider)
     var m1Param = FloatParameter("M1", 6, 0, 20, .slider)
@@ -36,8 +47,15 @@ class Renderer: Forge.Renderer, ObservableObject {
     var n22Param = FloatParameter("N22", 1.0, 0.0, 100.0, .slider)
     var n32Param = FloatParameter("N32", 1.0, 0.0, 100.0, .slider)
 
+    lazy var sceneParams: ParameterGroup = {
+        var params = ParameterGroup("Scene Controls")
+        params.append(bgColorParam)
+        return params
+    }()
+    
     lazy var params: ParameterGroup = {
         var params = ParameterGroup("Shape Controls")
+        params.append(wireframeParam)
         params.append(resParam)
         params.append(r1Param)
         params.append(a1Param)
@@ -52,7 +70,7 @@ class Renderer: Forge.Renderer, ObservableObject {
         params.append(m2Param)
         params.append(n12Param)
         params.append(n22Param)
-        params.append(n32Param)        
+        params.append(n32Param)
         return params
     }()
     
@@ -101,19 +119,12 @@ class Renderer: Forge.Renderer, ObservableObject {
         
     override func setupMtkView(_ metalKitView: MTKView) {
         metalKitView.isPaused = false
-        metalKitView.sampleCount = 8
+        metalKitView.sampleCount = 4
         metalKitView.depthStencilPixelFormat = .depth32Float
         metalKitView.preferredFramesPerSecond = 60
     }
     
     override func setup() {
-        DistributedNotificationCenter.default.addObserver(
-            self,
-            selector: #selector(updateAppearance),
-            name: Notification.Name("AppleInterfaceThemeChangedNotification"),
-            object: nil
-        )
-        
         updateAppearance()
         setupObservers()
     }
@@ -153,16 +164,38 @@ class Renderer: Forge.Renderer, ObservableObject {
                 })
             }
         }
-    }
         
-    @objc override func updateAppearance() {
-        if let _ = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") {
-            renderer.setClearColor([0.125, 0.125, 0.125, 1.0])
+        
+        let bgColorCb: (Float4Parameter, NSKeyValueObservedChange<Float>) -> Void = { [unowned self] _, _ in
+            self.updateBackgroundColor()
         }
-        else {
-            renderer.setClearColor([0.875, 0.875, 0.875, 1.0])
+        observers.append(bgColorParam.observe(\.x, changeHandler: bgColorCb))
+        observers.append(bgColorParam.observe(\.y, changeHandler: bgColorCb))
+        observers.append(bgColorParam.observe(\.z, changeHandler: bgColorCb))
+        observers.append(bgColorParam.observe(\.w, changeHandler: bgColorCb))
+    }
+    
+    func updateBackgroundColor()
+    {
+        let c = self.bgColorParam.value
+        let red = Double(c.x)
+        let green = Double(c.y)
+        let blue = Double(c.z)
+        let alpha = Double(c.w)
+        let clearColor: MTLClearColor = .init(red: red, green: green, blue: blue, alpha: alpha)
+        self.renderer.clearColor = clearColor
+    }
+    
+    override func updateAppearance() {
+        switch appearance {
+        case .dark:
+            bgColorParam.value = [0.125, 0.125, 0.125, 1.0]
+        case .light:
+            bgColorParam.value = [0.875, 0.875, 0.875, 1.0]
         }
     }
+    
+    
     
     override func update() {
         if updateGeometry {
@@ -170,10 +203,8 @@ class Renderer: Forge.Renderer, ObservableObject {
             updateGeometry = false
         }
         
-        #if os(macOS)
-            updateInspector()
-        #endif
         
+        updateInspector()
         cameraController.update()
     }
     
